@@ -1,7 +1,6 @@
-# simple-invoice
-Simple Invoice (Facturación Simple) es un sistema web desarrollado con PHP y MySQL que cubre una serie de requerimientos básicos
-para realizar una factura comercial a nuestros clientes que va desde el manejo de usuarios, creación de productos, clientes y facturas 
-dentro del mismo sistema.
+# Sistema para compra, venta y control de stock
+Es un sistema web desarrollado con PHP y MySQL que cubre una serie de requerimientos básicos
+para realizar una tarea especifica a nuestros clientes que va desde el manejo de usuarios, reportes, entrada y salida de repuestos de vehiculos dentro del mismo sistema.
 
 Instalación en windows (servidor local) 
 
