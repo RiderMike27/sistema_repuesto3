@@ -1,9 +1,5 @@
 <?php
-	/*-------------------------
-	Autor: Obed Alvarado
-	Web: obedalvarado.pw
-	Mail: info@obedalvarado.pw
-	---------------------------*/
+
 	session_start();
 	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
         header("location: login.php");
@@ -13,14 +9,14 @@
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Nueva Factura | Simple Invoice";
+	$title="Nueva Compra | Beto Repuestos";
 	
 	/* Connect To Database*/
 	require_once ("config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
 	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <?php include("head.php");?>
   </head>
@@ -31,7 +27,7 @@
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">
-			<h4><i class='glyphicon glyphicon-edit'></i> Nueva Factura</h4>
+			<h4><i class='glyphicon glyphicon-edit'></i> Nueva Compra</h4>
 		</div>
 		<div class="panel-body">
 		<?php 
@@ -41,18 +37,18 @@
 		?>
 			<form class="form-horizontal" role="form" id="datos_factura">
 				<div class="form-group row">
-				  <label for="nombre_cliente" class="col-md-1 control-label">Cliente</label>
+				  <label for="nombre_cliente" class="col-md-1 control-label">Nro.</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
+					  <input type="text" class="form-control input-sm" id="nombre_cliente" dissable="">
 					  <input id="id_cliente" type='hidden'>	
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" readonly>
 							</div>
-					<label for="mail" class="col-md-1 control-label">Email</label>
-							<div class="col-md-3">
-								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly>
+							<label for="tel2" class="col-md-1 control-label">Fecha</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
 							</div>
 				 </div>
 						<div class="form-group row">
@@ -80,8 +76,8 @@
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
 							</div>
-							<label for="email" class="col-md-1 control-label">Pago</label>
-							<div class="col-md-3">
+							<label for="email" class="col-md-1 control-label">Lote</label>
+							<div class="col-md-2">
 								<select class='form-control input-sm' id="condiciones">
 									<option value="1">Efectivo</option>
 									<option value="2">Cheque</option>
@@ -92,13 +88,10 @@
 						</div>
 				
 				
-				<div class="col-md-12">
+				<div class="col-md-11">
 					<div class="pull-right">
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoProducto">
 						 <span class="glyphicon glyphicon-plus"></span> Nuevo producto
-						</button>
-						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoCliente">
-						 <span class="glyphicon glyphicon-user"></span> Nuevo cliente
 						</button>
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
 						 <span class="glyphicon glyphicon-search"></span> Agregar productos
