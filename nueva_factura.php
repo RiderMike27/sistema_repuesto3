@@ -32,7 +32,7 @@
 		<div class="panel-body">
 		<?php 
 			include("modal/buscar_productos.php");
-			include("modal/registro_clientes.php");
+			
 			include("modal/registro_productos.php");
 		?>
 			<form class="form-horizontal" role="form" id="datos_factura">
@@ -42,11 +42,8 @@
 					  <input type="text" class="form-control input-sm" id="nombre_cliente" dissable="">
 					  <input id="id_cliente" type='hidden'>	
 				  </div>
-				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
-							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" readonly>
-							</div>
-							<label for="tel2" class="col-md-1 control-label">Fecha</label>
+				 
+							<label for="tel2" class="col-md-3 control-label">Fecha</label>
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
 							</div>
@@ -72,11 +69,8 @@
 									?>
 								</select>
 							</div>
-							<label for="tel2" class="col-md-1 control-label">Fecha</label>
-							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
-							</div>
-							<label for="email" class="col-md-1 control-label">Lote</label>
+							
+							<label for="email" class="col-md-3 control-label">Lote</label>
 							<div class="col-md-2">
 								<select class='form-control input-sm' id="condiciones">
 									<option value="1">Efectivo</option>
@@ -88,7 +82,7 @@
 						</div>
 				
 				
-				<div class="col-md-11">
+				<div class="col-md-9">
 					<div class="pull-right">
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#nuevoProducto">
 						 <span class="glyphicon glyphicon-plus"></span> Nuevo producto
