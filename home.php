@@ -6,8 +6,9 @@
         }
 	
 	$active_facturas="";
+	$active_ventas="";
 	$active_productos="";
-	$active_clientes="";
+	$active_reportes="";
 	$active_usuarios="";	
 	$title="Home | Beto Repuesto";
 ?>

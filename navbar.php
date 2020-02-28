@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="pull-left image">
-              <img src="img/LogoRepuestoBeto.png" width="200" height="120">
+      <a href="home.php"><img src="img/LogoRepuestoBeto.png" width="200" height="120"></a>
             </div>
     
     </div>
